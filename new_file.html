@@ -1,0 +1,29 @@
+<html ng-app="app">
+	<head>
+		<meta charset="utf-8"/>
+		<title>moves</title>
+		<script src="js/angular.js"></script>
+		<script src="js/new_file.js"></script>
+		<link href="css/new_file.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<div ng-controller ="gallery">
+			search:
+			<input ng-model="query"/>
+
+			<button ng-click="sort('a')">
+				Up
+			</button>
+			|
+			<button ng-click="sort('z')">
+				Down
+			</button>
+			<hr>
+			<div class="actor-box" ng-repeat="actor in myActors | filter:{name:query} |orderBy:upDown">
+				<a href="{{actor.link}}"> <img src="img/{{actor.img}}" width=200 height= 250/> </a>
+				{{actor.name}}
+				<hr>
+			</div>
+		</div>
+	</body>
+</html>

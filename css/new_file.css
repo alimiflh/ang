@@ -1,0 +1,12 @@
+.actor-box {
+	float: left;
+	width: 200px;
+	height: 250px;
+	margin: 30px;
+	text-align: center;
+}
+img:hover{
+	border:2px solid  red;
+		width: 198px;
+	height: 248px;
+}
